@@ -41,9 +41,9 @@ function buyInventory() {
 }
 
 function hireBarB() {
-    if (gameData.money > 10){
+    if (gameData.money > 15){
         gameData.Barb += 1
-        gameData.money -= 10
+        gameData.money -= 15
         document.getElementById("bankAccount").innerHTML = "Account Ballance: $" + gameData.money
         document.getElementById("staff").innerHTML = "Staff - Bar Backs: " + gameData.Barb + " Bartenders: " + gameData.Bart
         document.getElementById("warning").innerHTML = ""
@@ -137,6 +137,20 @@ function autobuybeer() {
         }
 
   }
+
+  function upcase() {
+    if (gameData.money >= 150){
+        gameData.casesize +=  6
+        gameData.money += -150
+        document.getElementById("warning").innerHTML = "Profits Upgraded"
+        document.getElementById("bankAccount").innerHTML = "Account Ballance: $" + gameData.money
+        document.getElementById("cases").innerHTML = "Buy Case of " + gameData.casesize + "(Cost $12)"
+    }
+    else{
+        document.getElementById("warning").innerHTML = "Not Enough Money to Upgrade Case Size"
+    }
+
+}
 
   function unlocker() {
     if(gameData.beer <= 20) { 
