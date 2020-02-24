@@ -139,14 +139,14 @@ function autobuybeer() {
   }
 
   function unlocker() {
-    if(gameData.beer <= 50) { 
-        document.getElementById("barbb").style.display = "none" 
-    }
-    else{document.getElementById("barbb").style.display = "inline-block"}
     if(gameData.beer <= 20) { 
         document.getElementById("barbt").style.display = "none"  
     }
     else{document.getElementById("barbt").style.display = "inline-block" }
+    if(gameData.beer <= 50) { 
+        document.getElementById("barbb").style.display = "none" 
+    }
+    else{document.getElementById("barbb").style.display = "inline-block"}
   }
 
 var mainGameLoop = window.setInterval(function() {
